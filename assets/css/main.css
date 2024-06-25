@@ -673,7 +673,7 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px 0 60px 0;
+  padding: 20px 0 60px 0;
   overflow: hidden;
 }
 
@@ -744,7 +744,7 @@ section,
 
 .hero .icon-box {
   background-color: var(--contrast-color);
-  padding: 50px 30px;
+  padding: 2px 30px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 29px 0 color-mix(in srgb, var(--default-color), transparent 90%);
@@ -757,7 +757,8 @@ section,
 
 .hero .icon-box .title {
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-top: 22px;
+  margin-bottom: 5px;
   font-size: 18px;
 }
 
@@ -773,13 +774,51 @@ section,
 }
 
 .hero .icon-box .icon {
-  margin-bottom: 20px;
-  padding-top: 10px;
+  margin-bottom: 8px;
+  padding-top: 8px;
   display: inline-block;
   transition: all 0.3s ease-in-out;
   font-size: 36px;
   line-height: 1;
   color: var(--accent-color);
+}
+
+.icon-box  image {
+  float: left;
+  color: #5c8eb0;
+  font-size: 40px;
+  line-height: 0;
+}
+
+#icon-image, #icon-image2, #icon-image3, #icon-image4, #icon-image5, #icon-image6 {
+  margin-bottom: 8px;
+  margin-left: 30px;
+  padding-top: 8px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  height: 44px;
+  width: 36px;
+  line-height: 1;
+  color: var(--accent-color);
+}
+
+ #guide1, #guide3, #guide5 {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+}
+ #guide2, #guide4, #guide6 {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+#guide1 > div[class="col-8"],
+#guide2 > div[class="col-8"],
+#guide3 > div[class="col-8"],
+#guide4 > div[class="col-8"],
+#guide5 > div[class="col-8"],
+#guide6 > div[class="col-8"] {
+  padding: 0px;
 }
 
 @media (min-width: 640px) {
