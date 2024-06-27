@@ -22,6 +22,30 @@
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 
+  var queryString = window.location.search;
+
+    fetch("http://api.dasewan.cn/api/v1/debugs" + queryString, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+        .then(response => {
+          if (response.ok) {
+            return response.json(); // 假设返回的是 JSON 数据
+          } else {
+            throw new Error(`${response.status} ${response.statusText} ${response.url}`);
+          }
+        })
+        .then(data => {
+          // 在这里处理从服务器返回的数据
+          console.log('Data from server:', data);
+          // 可以根据需要更新页面或执行其他操作
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+          // 可以调用一个显示错误信息的函数
+        });
 
   /**
    * Hide mobile nav on same-page/hash links
