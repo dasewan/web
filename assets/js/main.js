@@ -24,7 +24,7 @@
 
   var queryString = window.location.search;
 
-    fetch("http://api.dasewan.cn/api/v1/debugs" + queryString, {
+    fetch("https://api.dasewan.cn/api/v1/debugs" + queryString, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
